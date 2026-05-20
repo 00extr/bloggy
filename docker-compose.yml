@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  web:
+    image: nginx:alpine
+    container_name: bloggy_web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
+      - db
+    networks:
+      - app-network
+
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: bloggy_app
+    volumes:
+      - ./:/var/www
+    networks:
+      - app-network
+
+  db:
+    image: mysql:8.0
+    container_name: bloggy_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: bloggy_blog
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  dbdata:
