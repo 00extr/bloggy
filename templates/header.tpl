@@ -3,6 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>{$title|default:"Bloggy"}</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>

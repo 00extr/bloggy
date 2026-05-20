@@ -1,0 +1,25 @@
+{
+  "name": "bloggy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass assets/scss/app.scss public/css/app.css --watch",
+    "build": "sass assets/scss/app.scss public/css/app.css --style=compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://00extr@github.com/00extr/bloggy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/00extr/bloggy/issues"
+  },
+  "homepage": "https://github.com/00extr/bloggy#readme",
+  "devDependencies": {
+    "sass": "^1.85.0"
+  }
+}
