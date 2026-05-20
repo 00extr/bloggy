@@ -4,3 +4,5 @@
 .vscode/
 *.log
 .env
+node_modules/
+public/css/app.css.map
