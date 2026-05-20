@@ -44,7 +44,8 @@ class HomeController
         }
 
         View::render('home.tpl', [
-            'categories' => $content
+            'categories' => $content,
+            'title' => 'Home',
         ]);
     }
 }

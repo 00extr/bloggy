@@ -22,7 +22,7 @@ body {
     margin-top: 0;
 }
 
-.content_wrapper {
+.content_wrapper, .related_wrapper {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -30,7 +30,7 @@ body {
     align-items: flex-start; 
 }
 
-.content {
+.content, .related_card {
     box-sizing: border-box; 
     width: calc((100% - 40px) / 3); 
     min-width: 240px; 
@@ -46,7 +46,7 @@ body {
     margin-bottom: 10px;
 }
 
-.content_image {
+.content_image, .card_image {
     max-width: 100%;
     min-width: 100%;
     height: auto;

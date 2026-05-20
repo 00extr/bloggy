@@ -19,6 +19,8 @@ switch ($requestUri) {
             header("Location: /");
             exit;
         }
+        $controller = new \App\Controllers\PostController();
+        $controller->show((int)$postId);
         break;
 
     case '/category':
@@ -27,12 +29,14 @@ switch ($requestUri) {
             header("Location: /");
             exit;
         }
+        $controller = new \App\Controllers\CategoryController();
+        $controller->show((int)$categoryId);
         break;
 
     default:
         header("HTTP/1.0 404 Not Found");
-        
-        echo "<h1>404</h1>";
-        echo "Not found";
+        \App\Core\View::render('404.tpl', [
+            'title' => '404 Page Not Found'
+        ]);
         break;
 }

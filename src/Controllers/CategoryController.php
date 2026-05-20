@@ -63,7 +63,8 @@ class CategoryController
                 'id' => $categoryId,
                 'name' => $category['name'],
                 'description' => $category['description'],
-            ], 'posts' => $posts, 'currentPage' => $currentPage, 'totalPages' => $totalPages, 'currentSort' => $currentSort
+            ], 'posts' => $posts, 'currentPage' => $currentPage, 'totalPages' => $totalPages, 'currentSort' => $currentSort,
+            'title' => $category['name'],
         ]);
     }
 }
